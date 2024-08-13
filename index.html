@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador/Desencriptador</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <div class="columnaIzquierda">
+            <img src="asset/imagenes/logo.png" alt="Logo" class="logo"> 
+            <textarea class="textArea" id="inputText" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="nota">
+                <p> Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="button-section">
+                <button onclick="encriptarTexto()" id="encryptButton">Encriptar!</button>
+                <button onclick="desencriptarTexto()" id="decryptButton">Desencriptar!</button>
+            </div>
+           
+        </div>
+        <div class="columnaDerecha">
+            <textarea class="textArea1" id="outputText" readonly></textarea>
+            <button onclick="copiarTexto()" id="copyButton">Copiar</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,5 +1,11 @@
 function encriptarTexto() {
-    let input = document.getElementById('inputText').value.toLowerCase();
+    let input = document.getElementById('inputText').value;
+
+    if (/[^a-z\s]/.test(input)) {
+        alert('Por favor, ingrese solo letras minúsculas y sin acentos.');
+        return;
+    }
+
     let encrypted = input
         .replace(/e/g, 'enter')
         .replace(/i/g, 'imes')
@@ -10,7 +16,13 @@ function encriptarTexto() {
 }
 
 function desencriptarTexto() {
-    let input = document.getElementById('inputText').value.toLowerCase();
+    let input = document.getElementById('inputText').value;
+
+    if (/[^a-z\s]/.test(input)) {
+        alert('Por favor, ingrese solo letras minúsculas y sin acentos.');
+        return;
+    }
+
     let decrypted = input
         .replace(/enter/g, 'e')
         .replace(/imes/g, 'i')
